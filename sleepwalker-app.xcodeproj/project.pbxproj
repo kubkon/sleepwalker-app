@@ -7,75 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEC303D120ACD024000A740B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC303D020ACD024000A740B /* AppDelegate.m */; };
-		CEC303D420ACD024000A740B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC303D320ACD024000A740B /* ViewController.m */; };
-		CEC303D720ACD024000A740B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC303D520ACD024000A740B /* Main.storyboard */; };
-		CEC303D920ACD025000A740B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC303D820ACD025000A740B /* Assets.xcassets */; };
-		CEC303DC20ACD025000A740B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC303DA20ACD025000A740B /* LaunchScreen.storyboard */; };
-		CEC303DF20ACD025000A740B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC303DE20ACD025000A740B /* main.m */; };
-		CEC303E920ACD025000A740B /* sleepwalker_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC303E820ACD025000A740B /* sleepwalker_appTests.m */; };
-		CEC303F420ACD025000A740B /* sleepwalker_appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC303F320ACD025000A740B /* sleepwalker_appUITests.m */; };
-		CEC303F920ACD025000A740B /* sleepwalker-app WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CEC303F820ACD025000A740B /* sleepwalker-app WatchKit App.app */; };
-		CEC303FF20ACD025000A740B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC303FD20ACD025000A740B /* Interface.storyboard */; };
-		CEC3040120ACD026000A740B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC3040020ACD026000A740B /* Assets.xcassets */; };
-		CEC3040820ACD026000A740B /* sleepwalker-app WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEC3040720ACD026000A740B /* sleepwalker-app WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CEC3040E20ACD026000A740B /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3040D20ACD026000A740B /* InterfaceController.m */; };
-		CEC3041120ACD026000A740B /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3041020ACD026000A740B /* ExtensionDelegate.m */; };
-		CEC3041420ACD026000A740B /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3041320ACD026000A740B /* NotificationController.m */; };
-		CEC3041720ACD026000A740B /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3041620ACD026000A740B /* ComplicationController.m */; };
-		CEC3041920ACD027000A740B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC3041820ACD027000A740B /* Assets.xcassets */; };
+		CE3D012920B3704A009C64B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D012820B3704A009C64B7 /* AppDelegate.swift */; };
+		CE3D012B20B3704A009C64B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D012A20B3704A009C64B7 /* ViewController.swift */; };
+		CE3D012E20B3704A009C64B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3D012C20B3704A009C64B7 /* Main.storyboard */; };
+		CE3D013020B3704B009C64B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3D012F20B3704B009C64B7 /* Assets.xcassets */; };
+		CE3D013320B3704B009C64B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3D013120B3704B009C64B7 /* LaunchScreen.storyboard */; };
+		CE3D013E20B3704B009C64B7 /* sleepwalker_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D013D20B3704B009C64B7 /* sleepwalker_appTests.swift */; };
+		CE3D014920B3704B009C64B7 /* sleepwalker_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D014820B3704B009C64B7 /* sleepwalker_appUITests.swift */; };
+		CE3D014E20B3704B009C64B7 /* sleepwalker-app WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE3D014D20B3704B009C64B7 /* sleepwalker-app WatchKit App.app */; };
+		CE3D015420B3704B009C64B7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3D015220B3704B009C64B7 /* Interface.storyboard */; };
+		CE3D015620B3704C009C64B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3D015520B3704C009C64B7 /* Assets.xcassets */; };
+		CE3D015D20B3704C009C64B7 /* sleepwalker-app WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE3D015C20B3704C009C64B7 /* sleepwalker-app WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE3D016220B3704C009C64B7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D016120B3704C009C64B7 /* InterfaceController.swift */; };
+		CE3D016420B3704C009C64B7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D016320B3704C009C64B7 /* ExtensionDelegate.swift */; };
+		CE3D016620B3704C009C64B7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D016520B3704C009C64B7 /* NotificationController.swift */; };
+		CE3D016820B3704C009C64B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3D016720B3704C009C64B7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CEC303E520ACD025000A740B /* PBXContainerItemProxy */ = {
+		CE3D013A20B3704B009C64B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CEC303C420ACD024000A740B /* Project object */;
+			containerPortal = CE3D011D20B37049009C64B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CEC303CB20ACD024000A740B;
+			remoteGlobalIDString = CE3D012420B3704A009C64B7;
 			remoteInfo = "sleepwalker-app";
 		};
-		CEC303F020ACD025000A740B /* PBXContainerItemProxy */ = {
+		CE3D014520B3704B009C64B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CEC303C420ACD024000A740B /* Project object */;
+			containerPortal = CE3D011D20B37049009C64B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CEC303CB20ACD024000A740B;
+			remoteGlobalIDString = CE3D012420B3704A009C64B7;
 			remoteInfo = "sleepwalker-app";
 		};
-		CEC303FA20ACD025000A740B /* PBXContainerItemProxy */ = {
+		CE3D014F20B3704B009C64B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CEC303C420ACD024000A740B /* Project object */;
+			containerPortal = CE3D011D20B37049009C64B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CEC303F720ACD025000A740B;
+			remoteGlobalIDString = CE3D014C20B3704B009C64B7;
 			remoteInfo = "sleepwalker-app WatchKit App";
 		};
-		CEC3040920ACD026000A740B /* PBXContainerItemProxy */ = {
+		CE3D015E20B3704C009C64B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CEC303C420ACD024000A740B /* Project object */;
+			containerPortal = CE3D011D20B37049009C64B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CEC3040620ACD026000A740B;
+			remoteGlobalIDString = CE3D015B20B3704C009C64B7;
 			remoteInfo = "sleepwalker-app WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CEC3042120ACD027000A740B /* Embed App Extensions */ = {
+		CE3D017020B3704C009C64B7 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CEC3040820ACD026000A740B /* sleepwalker-app WatchKit Extension.appex in Embed App Extensions */,
+				CE3D015D20B3704C009C64B7 /* sleepwalker-app WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC3042520ACD027000A740B /* Embed Watch Content */ = {
+		CE3D017420B3704C009C64B7 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				CEC303F920ACD025000A740B /* sleepwalker-app WatchKit App.app in Embed Watch Content */,
+				CE3D014E20B3704B009C64B7 /* sleepwalker-app WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,63 +81,55 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CEC303CC20ACD024000A740B /* sleepwalker-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwalker-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC303CF20ACD024000A740B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CEC303D020ACD024000A740B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CEC303D220ACD024000A740B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CEC303D320ACD024000A740B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CEC303D620ACD024000A740B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CEC303D820ACD025000A740B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CEC303DB20ACD025000A740B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CEC303DD20ACD025000A740B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC303DE20ACD025000A740B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CEC303E420ACD025000A740B /* sleepwalker-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sleepwalker-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC303E820ACD025000A740B /* sleepwalker_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sleepwalker_appTests.m; sourceTree = "<group>"; };
-		CEC303EA20ACD025000A740B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC303EF20ACD025000A740B /* sleepwalker-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sleepwalker-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC303F320ACD025000A740B /* sleepwalker_appUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sleepwalker_appUITests.m; sourceTree = "<group>"; };
-		CEC303F520ACD025000A740B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC303F820ACD025000A740B /* sleepwalker-app WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwalker-app WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC303FE20ACD025000A740B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		CEC3040020ACD026000A740B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CEC3040220ACD026000A740B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC3040720ACD026000A740B /* sleepwalker-app WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "sleepwalker-app WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC3040C20ACD026000A740B /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		CEC3040D20ACD026000A740B /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		CEC3040F20ACD026000A740B /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
-		CEC3041020ACD026000A740B /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
-		CEC3041220ACD026000A740B /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
-		CEC3041320ACD026000A740B /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
-		CEC3041520ACD026000A740B /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
-		CEC3041620ACD026000A740B /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
-		CEC3041820ACD027000A740B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CEC3041A20ACD027000A740B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC3041B20ACD027000A740B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CE3D012520B3704A009C64B7 /* sleepwalker-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwalker-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D012820B3704A009C64B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE3D012A20B3704A009C64B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE3D012D20B3704A009C64B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE3D012F20B3704B009C64B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE3D013220B3704B009C64B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE3D013420B3704B009C64B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3D013920B3704B009C64B7 /* sleepwalker-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sleepwalker-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D013D20B3704B009C64B7 /* sleepwalker_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepwalker_appTests.swift; sourceTree = "<group>"; };
+		CE3D013F20B3704B009C64B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3D014420B3704B009C64B7 /* sleepwalker-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sleepwalker-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D014820B3704B009C64B7 /* sleepwalker_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepwalker_appUITests.swift; sourceTree = "<group>"; };
+		CE3D014A20B3704B009C64B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3D014D20B3704B009C64B7 /* sleepwalker-app WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwalker-app WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D015320B3704B009C64B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		CE3D015520B3704C009C64B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE3D015720B3704C009C64B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3D015C20B3704C009C64B7 /* sleepwalker-app WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "sleepwalker-app WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D016120B3704C009C64B7 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		CE3D016320B3704C009C64B7 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		CE3D016520B3704C009C64B7 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		CE3D016720B3704C009C64B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE3D016920B3704C009C64B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3D016A20B3704C009C64B7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CEC303C920ACD024000A740B /* Frameworks */ = {
+		CE3D012220B3704A009C64B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC303E120ACD025000A740B /* Frameworks */ = {
+		CE3D013620B3704B009C64B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC303EC20ACD025000A740B /* Frameworks */ = {
+		CE3D014120B3704B009C64B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC3040420ACD026000A740B /* Frameworks */ = {
+		CE3D015920B3704C009C64B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,88 +139,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CEC303C320ACD024000A740B = {
+		CE3D011C20B37049009C64B7 = {
 			isa = PBXGroup;
 			children = (
-				CEC303CE20ACD024000A740B /* sleepwalker-app */,
-				CEC303E720ACD025000A740B /* sleepwalker-appTests */,
-				CEC303F220ACD025000A740B /* sleepwalker-appUITests */,
-				CEC303FC20ACD025000A740B /* sleepwalker-app WatchKit App */,
-				CEC3040B20ACD026000A740B /* sleepwalker-app WatchKit Extension */,
-				CEC303CD20ACD024000A740B /* Products */,
+				CE3D012720B3704A009C64B7 /* sleepwalker-app */,
+				CE3D013C20B3704B009C64B7 /* sleepwalker-appTests */,
+				CE3D014720B3704B009C64B7 /* sleepwalker-appUITests */,
+				CE3D015120B3704B009C64B7 /* sleepwalker-app WatchKit App */,
+				CE3D016020B3704C009C64B7 /* sleepwalker-app WatchKit Extension */,
+				CE3D012620B3704A009C64B7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CEC303CD20ACD024000A740B /* Products */ = {
+		CE3D012620B3704A009C64B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEC303CC20ACD024000A740B /* sleepwalker-app.app */,
-				CEC303E420ACD025000A740B /* sleepwalker-appTests.xctest */,
-				CEC303EF20ACD025000A740B /* sleepwalker-appUITests.xctest */,
-				CEC303F820ACD025000A740B /* sleepwalker-app WatchKit App.app */,
-				CEC3040720ACD026000A740B /* sleepwalker-app WatchKit Extension.appex */,
+				CE3D012520B3704A009C64B7 /* sleepwalker-app.app */,
+				CE3D013920B3704B009C64B7 /* sleepwalker-appTests.xctest */,
+				CE3D014420B3704B009C64B7 /* sleepwalker-appUITests.xctest */,
+				CE3D014D20B3704B009C64B7 /* sleepwalker-app WatchKit App.app */,
+				CE3D015C20B3704C009C64B7 /* sleepwalker-app WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEC303CE20ACD024000A740B /* sleepwalker-app */ = {
+		CE3D012720B3704A009C64B7 /* sleepwalker-app */ = {
 			isa = PBXGroup;
 			children = (
-				CEC303CF20ACD024000A740B /* AppDelegate.h */,
-				CEC303D020ACD024000A740B /* AppDelegate.m */,
-				CEC303D220ACD024000A740B /* ViewController.h */,
-				CEC303D320ACD024000A740B /* ViewController.m */,
-				CEC303D520ACD024000A740B /* Main.storyboard */,
-				CEC303D820ACD025000A740B /* Assets.xcassets */,
-				CEC303DA20ACD025000A740B /* LaunchScreen.storyboard */,
-				CEC303DD20ACD025000A740B /* Info.plist */,
-				CEC303DE20ACD025000A740B /* main.m */,
+				CE3D012820B3704A009C64B7 /* AppDelegate.swift */,
+				CE3D012A20B3704A009C64B7 /* ViewController.swift */,
+				CE3D012C20B3704A009C64B7 /* Main.storyboard */,
+				CE3D012F20B3704B009C64B7 /* Assets.xcassets */,
+				CE3D013120B3704B009C64B7 /* LaunchScreen.storyboard */,
+				CE3D013420B3704B009C64B7 /* Info.plist */,
 			);
 			path = "sleepwalker-app";
 			sourceTree = "<group>";
 		};
-		CEC303E720ACD025000A740B /* sleepwalker-appTests */ = {
+		CE3D013C20B3704B009C64B7 /* sleepwalker-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEC303E820ACD025000A740B /* sleepwalker_appTests.m */,
-				CEC303EA20ACD025000A740B /* Info.plist */,
+				CE3D013D20B3704B009C64B7 /* sleepwalker_appTests.swift */,
+				CE3D013F20B3704B009C64B7 /* Info.plist */,
 			);
 			path = "sleepwalker-appTests";
 			sourceTree = "<group>";
 		};
-		CEC303F220ACD025000A740B /* sleepwalker-appUITests */ = {
+		CE3D014720B3704B009C64B7 /* sleepwalker-appUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CEC303F320ACD025000A740B /* sleepwalker_appUITests.m */,
-				CEC303F520ACD025000A740B /* Info.plist */,
+				CE3D014820B3704B009C64B7 /* sleepwalker_appUITests.swift */,
+				CE3D014A20B3704B009C64B7 /* Info.plist */,
 			);
 			path = "sleepwalker-appUITests";
 			sourceTree = "<group>";
 		};
-		CEC303FC20ACD025000A740B /* sleepwalker-app WatchKit App */ = {
+		CE3D015120B3704B009C64B7 /* sleepwalker-app WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				CEC303FD20ACD025000A740B /* Interface.storyboard */,
-				CEC3040020ACD026000A740B /* Assets.xcassets */,
-				CEC3040220ACD026000A740B /* Info.plist */,
+				CE3D015220B3704B009C64B7 /* Interface.storyboard */,
+				CE3D015520B3704C009C64B7 /* Assets.xcassets */,
+				CE3D015720B3704C009C64B7 /* Info.plist */,
 			);
 			path = "sleepwalker-app WatchKit App";
 			sourceTree = "<group>";
 		};
-		CEC3040B20ACD026000A740B /* sleepwalker-app WatchKit Extension */ = {
+		CE3D016020B3704C009C64B7 /* sleepwalker-app WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CEC3040C20ACD026000A740B /* InterfaceController.h */,
-				CEC3040D20ACD026000A740B /* InterfaceController.m */,
-				CEC3040F20ACD026000A740B /* ExtensionDelegate.h */,
-				CEC3041020ACD026000A740B /* ExtensionDelegate.m */,
-				CEC3041220ACD026000A740B /* NotificationController.h */,
-				CEC3041320ACD026000A740B /* NotificationController.m */,
-				CEC3041520ACD026000A740B /* ComplicationController.h */,
-				CEC3041620ACD026000A740B /* ComplicationController.m */,
-				CEC3041820ACD027000A740B /* Assets.xcassets */,
-				CEC3041A20ACD027000A740B /* Info.plist */,
-				CEC3041B20ACD027000A740B /* PushNotificationPayload.apns */,
+				CE3D016120B3704C009C64B7 /* InterfaceController.swift */,
+				CE3D016320B3704C009C64B7 /* ExtensionDelegate.swift */,
+				CE3D016520B3704C009C64B7 /* NotificationController.swift */,
+				CE3D016720B3704C009C64B7 /* Assets.xcassets */,
+				CE3D016920B3704C009C64B7 /* Info.plist */,
+				CE3D016A20B3704C009C64B7 /* PushNotificationPayload.apns */,
 			);
 			path = "sleepwalker-app WatchKit Extension";
 			sourceTree = "<group>";
@@ -238,85 +220,85 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEC303CB20ACD024000A740B /* sleepwalker-app */ = {
+		CE3D012420B3704A009C64B7 /* sleepwalker-app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC3042620ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-app" */;
+			buildConfigurationList = CE3D017520B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-app" */;
 			buildPhases = (
-				CEC303C820ACD024000A740B /* Sources */,
-				CEC303C920ACD024000A740B /* Frameworks */,
-				CEC303CA20ACD024000A740B /* Resources */,
-				CEC3042520ACD027000A740B /* Embed Watch Content */,
+				CE3D012120B3704A009C64B7 /* Sources */,
+				CE3D012220B3704A009C64B7 /* Frameworks */,
+				CE3D012320B3704A009C64B7 /* Resources */,
+				CE3D017420B3704C009C64B7 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CEC303FB20ACD025000A740B /* PBXTargetDependency */,
+				CE3D015020B3704B009C64B7 /* PBXTargetDependency */,
 			);
 			name = "sleepwalker-app";
 			productName = "sleepwalker-app";
-			productReference = CEC303CC20ACD024000A740B /* sleepwalker-app.app */;
+			productReference = CE3D012520B3704A009C64B7 /* sleepwalker-app.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CEC303E320ACD025000A740B /* sleepwalker-appTests */ = {
+		CE3D013820B3704B009C64B7 /* sleepwalker-appTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC3042920ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-appTests" */;
+			buildConfigurationList = CE3D017820B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-appTests" */;
 			buildPhases = (
-				CEC303E020ACD025000A740B /* Sources */,
-				CEC303E120ACD025000A740B /* Frameworks */,
-				CEC303E220ACD025000A740B /* Resources */,
+				CE3D013520B3704B009C64B7 /* Sources */,
+				CE3D013620B3704B009C64B7 /* Frameworks */,
+				CE3D013720B3704B009C64B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CEC303E620ACD025000A740B /* PBXTargetDependency */,
+				CE3D013B20B3704B009C64B7 /* PBXTargetDependency */,
 			);
 			name = "sleepwalker-appTests";
 			productName = "sleepwalker-appTests";
-			productReference = CEC303E420ACD025000A740B /* sleepwalker-appTests.xctest */;
+			productReference = CE3D013920B3704B009C64B7 /* sleepwalker-appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CEC303EE20ACD025000A740B /* sleepwalker-appUITests */ = {
+		CE3D014320B3704B009C64B7 /* sleepwalker-appUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC3042C20ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-appUITests" */;
+			buildConfigurationList = CE3D017B20B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-appUITests" */;
 			buildPhases = (
-				CEC303EB20ACD025000A740B /* Sources */,
-				CEC303EC20ACD025000A740B /* Frameworks */,
-				CEC303ED20ACD025000A740B /* Resources */,
+				CE3D014020B3704B009C64B7 /* Sources */,
+				CE3D014120B3704B009C64B7 /* Frameworks */,
+				CE3D014220B3704B009C64B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CEC303F120ACD025000A740B /* PBXTargetDependency */,
+				CE3D014620B3704B009C64B7 /* PBXTargetDependency */,
 			);
 			name = "sleepwalker-appUITests";
 			productName = "sleepwalker-appUITests";
-			productReference = CEC303EF20ACD025000A740B /* sleepwalker-appUITests.xctest */;
+			productReference = CE3D014420B3704B009C64B7 /* sleepwalker-appUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		CEC303F720ACD025000A740B /* sleepwalker-app WatchKit App */ = {
+		CE3D014C20B3704B009C64B7 /* sleepwalker-app WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC3042220ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit App" */;
+			buildConfigurationList = CE3D017120B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit App" */;
 			buildPhases = (
-				CEC303F620ACD025000A740B /* Resources */,
-				CEC3042120ACD027000A740B /* Embed App Extensions */,
+				CE3D014B20B3704B009C64B7 /* Resources */,
+				CE3D017020B3704C009C64B7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CEC3040A20ACD026000A740B /* PBXTargetDependency */,
+				CE3D015F20B3704C009C64B7 /* PBXTargetDependency */,
 			);
 			name = "sleepwalker-app WatchKit App";
 			productName = "sleepwalker-app WatchKit App";
-			productReference = CEC303F820ACD025000A740B /* sleepwalker-app WatchKit App.app */;
+			productReference = CE3D014D20B3704B009C64B7 /* sleepwalker-app WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		CEC3040620ACD026000A740B /* sleepwalker-app WatchKit Extension */ = {
+		CE3D015B20B3704C009C64B7 /* sleepwalker-app WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC3041E20ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit Extension" */;
+			buildConfigurationList = CE3D016D20B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit Extension" */;
 			buildPhases = (
-				CEC3040320ACD026000A740B /* Sources */,
-				CEC3040420ACD026000A740B /* Frameworks */,
-				CEC3040520ACD026000A740B /* Resources */,
+				CE3D015820B3704C009C64B7 /* Sources */,
+				CE3D015920B3704C009C64B7 /* Frameworks */,
+				CE3D015A20B3704C009C64B7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -324,38 +306,39 @@
 			);
 			name = "sleepwalker-app WatchKit Extension";
 			productName = "sleepwalker-app WatchKit Extension";
-			productReference = CEC3040720ACD026000A740B /* sleepwalker-app WatchKit Extension.appex */;
+			productReference = CE3D015C20B3704C009C64B7 /* sleepwalker-app WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CEC303C420ACD024000A740B /* Project object */ = {
+		CE3D011D20B37049009C64B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jakub Konka";
 				TargetAttributes = {
-					CEC303CB20ACD024000A740B = {
+					CE3D012420B3704A009C64B7 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
-					CEC303E320ACD025000A740B = {
+					CE3D013820B3704B009C64B7 = {
 						CreatedOnToolsVersion = 9.3.1;
-						TestTargetID = CEC303CB20ACD024000A740B;
+						TestTargetID = CE3D012420B3704A009C64B7;
 					};
-					CEC303EE20ACD025000A740B = {
+					CE3D014320B3704B009C64B7 = {
 						CreatedOnToolsVersion = 9.3.1;
-						TestTargetID = CEC303CB20ACD024000A740B;
+						TestTargetID = CE3D012420B3704A009C64B7;
 					};
-					CEC303F720ACD025000A740B = {
+					CE3D014C20B3704B009C64B7 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
-					CEC3040620ACD026000A740B = {
+					CE3D015B20B3704C009C64B7 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
 				};
 			};
-			buildConfigurationList = CEC303C720ACD024000A740B /* Build configuration list for PBXProject "sleepwalker-app" */;
+			buildConfigurationList = CE3D012020B37049009C64B7 /* Build configuration list for PBXProject "sleepwalker-app" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -363,148 +346,146 @@
 				en,
 				Base,
 			);
-			mainGroup = CEC303C320ACD024000A740B;
-			productRefGroup = CEC303CD20ACD024000A740B /* Products */;
+			mainGroup = CE3D011C20B37049009C64B7;
+			productRefGroup = CE3D012620B3704A009C64B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEC303CB20ACD024000A740B /* sleepwalker-app */,
-				CEC303E320ACD025000A740B /* sleepwalker-appTests */,
-				CEC303EE20ACD025000A740B /* sleepwalker-appUITests */,
-				CEC303F720ACD025000A740B /* sleepwalker-app WatchKit App */,
-				CEC3040620ACD026000A740B /* sleepwalker-app WatchKit Extension */,
+				CE3D012420B3704A009C64B7 /* sleepwalker-app */,
+				CE3D013820B3704B009C64B7 /* sleepwalker-appTests */,
+				CE3D014320B3704B009C64B7 /* sleepwalker-appUITests */,
+				CE3D014C20B3704B009C64B7 /* sleepwalker-app WatchKit App */,
+				CE3D015B20B3704C009C64B7 /* sleepwalker-app WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CEC303CA20ACD024000A740B /* Resources */ = {
+		CE3D012320B3704A009C64B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC303DC20ACD025000A740B /* LaunchScreen.storyboard in Resources */,
-				CEC303D920ACD025000A740B /* Assets.xcassets in Resources */,
-				CEC303D720ACD024000A740B /* Main.storyboard in Resources */,
+				CE3D013320B3704B009C64B7 /* LaunchScreen.storyboard in Resources */,
+				CE3D013020B3704B009C64B7 /* Assets.xcassets in Resources */,
+				CE3D012E20B3704A009C64B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC303E220ACD025000A740B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEC303ED20ACD025000A740B /* Resources */ = {
+		CE3D013720B3704B009C64B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC303F620ACD025000A740B /* Resources */ = {
+		CE3D014220B3704B009C64B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC3040120ACD026000A740B /* Assets.xcassets in Resources */,
-				CEC303FF20ACD025000A740B /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC3040520ACD026000A740B /* Resources */ = {
+		CE3D014B20B3704B009C64B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC3041920ACD027000A740B /* Assets.xcassets in Resources */,
+				CE3D015620B3704C009C64B7 /* Assets.xcassets in Resources */,
+				CE3D015420B3704B009C64B7 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3D015A20B3704C009C64B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3D016820B3704C009C64B7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CEC303C820ACD024000A740B /* Sources */ = {
+		CE3D012120B3704A009C64B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC303D420ACD024000A740B /* ViewController.m in Sources */,
-				CEC303DF20ACD025000A740B /* main.m in Sources */,
-				CEC303D120ACD024000A740B /* AppDelegate.m in Sources */,
+				CE3D012B20B3704A009C64B7 /* ViewController.swift in Sources */,
+				CE3D012920B3704A009C64B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC303E020ACD025000A740B /* Sources */ = {
+		CE3D013520B3704B009C64B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC303E920ACD025000A740B /* sleepwalker_appTests.m in Sources */,
+				CE3D013E20B3704B009C64B7 /* sleepwalker_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC303EB20ACD025000A740B /* Sources */ = {
+		CE3D014020B3704B009C64B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC303F420ACD025000A740B /* sleepwalker_appUITests.m in Sources */,
+				CE3D014920B3704B009C64B7 /* sleepwalker_appUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEC3040320ACD026000A740B /* Sources */ = {
+		CE3D015820B3704C009C64B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC3041120ACD026000A740B /* ExtensionDelegate.m in Sources */,
-				CEC3041720ACD026000A740B /* ComplicationController.m in Sources */,
-				CEC3040E20ACD026000A740B /* InterfaceController.m in Sources */,
-				CEC3041420ACD026000A740B /* NotificationController.m in Sources */,
+				CE3D016620B3704C009C64B7 /* NotificationController.swift in Sources */,
+				CE3D016420B3704C009C64B7 /* ExtensionDelegate.swift in Sources */,
+				CE3D016220B3704C009C64B7 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CEC303E620ACD025000A740B /* PBXTargetDependency */ = {
+		CE3D013B20B3704B009C64B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CEC303CB20ACD024000A740B /* sleepwalker-app */;
-			targetProxy = CEC303E520ACD025000A740B /* PBXContainerItemProxy */;
+			target = CE3D012420B3704A009C64B7 /* sleepwalker-app */;
+			targetProxy = CE3D013A20B3704B009C64B7 /* PBXContainerItemProxy */;
 		};
-		CEC303F120ACD025000A740B /* PBXTargetDependency */ = {
+		CE3D014620B3704B009C64B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CEC303CB20ACD024000A740B /* sleepwalker-app */;
-			targetProxy = CEC303F020ACD025000A740B /* PBXContainerItemProxy */;
+			target = CE3D012420B3704A009C64B7 /* sleepwalker-app */;
+			targetProxy = CE3D014520B3704B009C64B7 /* PBXContainerItemProxy */;
 		};
-		CEC303FB20ACD025000A740B /* PBXTargetDependency */ = {
+		CE3D015020B3704B009C64B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CEC303F720ACD025000A740B /* sleepwalker-app WatchKit App */;
-			targetProxy = CEC303FA20ACD025000A740B /* PBXContainerItemProxy */;
+			target = CE3D014C20B3704B009C64B7 /* sleepwalker-app WatchKit App */;
+			targetProxy = CE3D014F20B3704B009C64B7 /* PBXContainerItemProxy */;
 		};
-		CEC3040A20ACD026000A740B /* PBXTargetDependency */ = {
+		CE3D015F20B3704C009C64B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CEC3040620ACD026000A740B /* sleepwalker-app WatchKit Extension */;
-			targetProxy = CEC3040920ACD026000A740B /* PBXContainerItemProxy */;
+			target = CE3D015B20B3704C009C64B7 /* sleepwalker-app WatchKit Extension */;
+			targetProxy = CE3D015E20B3704C009C64B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CEC303D520ACD024000A740B /* Main.storyboard */ = {
+		CE3D012C20B3704A009C64B7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CEC303D620ACD024000A740B /* Base */,
+				CE3D012D20B3704A009C64B7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CEC303DA20ACD025000A740B /* LaunchScreen.storyboard */ = {
+		CE3D013120B3704B009C64B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CEC303DB20ACD025000A740B /* Base */,
+				CE3D013220B3704B009C64B7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		CEC303FD20ACD025000A740B /* Interface.storyboard */ = {
+		CE3D015220B3704B009C64B7 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CEC303FE20ACD025000A740B /* Base */,
+				CE3D015320B3704B009C64B7 /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -512,7 +493,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CEC3041C20ACD027000A740B /* Debug */ = {
+		CE3D016B20B3704C009C64B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -567,10 +548,12 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		CEC3041D20ACD027000A740B /* Release */ = {
+		CE3D016C20B3704C009C64B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -618,11 +601,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		CEC3041F20ACD027000A740B /* Debug */ = {
+		CE3D016E20B3704C009C64B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
@@ -638,12 +623,13 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
-		CEC3042020ACD027000A740B /* Release */ = {
+		CE3D016F20B3704C009C64B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
@@ -659,14 +645,16 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
-		CEC3042320ACD027000A740B /* Debug */ = {
+		CE3D017220B3704C009C64B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
@@ -676,14 +664,16 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
-		CEC3042420ACD027000A740B /* Release */ = {
+		CE3D017320B3704C009C64B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
@@ -693,12 +683,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
-		CEC3042720ACD027000A740B /* Debug */ = {
+		CE3D017620B3704C009C64B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -711,11 +702,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakubkonka.sleepwalker-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CEC3042820ACD027000A740B /* Release */ = {
+		CE3D017720B3704C009C64B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -728,13 +720,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakubkonka.sleepwalker-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		CEC3042A20ACD027000A740B /* Debug */ = {
+		CE3D017920B3704C009C64B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
@@ -746,14 +740,16 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakubkonka.sleepwalker-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sleepwalker-app.app/sleepwalker-app";
 			};
 			name = Debug;
 		};
-		CEC3042B20ACD027000A740B /* Release */ = {
+		CE3D017A20B3704C009C64B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
@@ -765,14 +761,16 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakubkonka.sleepwalker-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sleepwalker-app.app/sleepwalker-app";
 			};
 			name = Release;
 		};
-		CEC3042D20ACD027000A740B /* Debug */ = {
+		CE3D017C20B3704C009C64B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
 				INFOPLIST_FILE = "sleepwalker-appUITests/Info.plist";
@@ -783,14 +781,16 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakubkonka.sleepwalker-appUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "sleepwalker-app";
 			};
 			name = Debug;
 		};
-		CEC3042E20ACD027000A740B /* Release */ = {
+		CE3D017D20B3704C009C64B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
 				INFOPLIST_FILE = "sleepwalker-appUITests/Info.plist";
@@ -801,6 +801,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakubkonka.sleepwalker-appUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "sleepwalker-app";
 			};
@@ -809,61 +810,61 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEC303C720ACD024000A740B /* Build configuration list for PBXProject "sleepwalker-app" */ = {
+		CE3D012020B37049009C64B7 /* Build configuration list for PBXProject "sleepwalker-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEC3041C20ACD027000A740B /* Debug */,
-				CEC3041D20ACD027000A740B /* Release */,
+				CE3D016B20B3704C009C64B7 /* Debug */,
+				CE3D016C20B3704C009C64B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC3041E20ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit Extension" */ = {
+		CE3D016D20B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEC3041F20ACD027000A740B /* Debug */,
-				CEC3042020ACD027000A740B /* Release */,
+				CE3D016E20B3704C009C64B7 /* Debug */,
+				CE3D016F20B3704C009C64B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC3042220ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit App" */ = {
+		CE3D017120B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-app WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEC3042320ACD027000A740B /* Debug */,
-				CEC3042420ACD027000A740B /* Release */,
+				CE3D017220B3704C009C64B7 /* Debug */,
+				CE3D017320B3704C009C64B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC3042620ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-app" */ = {
+		CE3D017520B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEC3042720ACD027000A740B /* Debug */,
-				CEC3042820ACD027000A740B /* Release */,
+				CE3D017620B3704C009C64B7 /* Debug */,
+				CE3D017720B3704C009C64B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC3042920ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-appTests" */ = {
+		CE3D017820B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-appTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEC3042A20ACD027000A740B /* Debug */,
-				CEC3042B20ACD027000A740B /* Release */,
+				CE3D017920B3704C009C64B7 /* Debug */,
+				CE3D017A20B3704C009C64B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC3042C20ACD027000A740B /* Build configuration list for PBXNativeTarget "sleepwalker-appUITests" */ = {
+		CE3D017B20B3704C009C64B7 /* Build configuration list for PBXNativeTarget "sleepwalker-appUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEC3042D20ACD027000A740B /* Debug */,
-				CEC3042E20ACD027000A740B /* Release */,
+				CE3D017C20B3704C009C64B7 /* Debug */,
+				CE3D017D20B3704C009C64B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CEC303C420ACD024000A740B /* Project object */;
+	rootObject = CE3D011D20B37049009C64B7 /* Project object */;
 }

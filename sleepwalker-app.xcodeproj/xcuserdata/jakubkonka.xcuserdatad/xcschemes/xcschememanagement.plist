@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>sleepwalker-app WatchKit App (Complication).xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
 		<key>sleepwalker-app WatchKit App (Notification).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
