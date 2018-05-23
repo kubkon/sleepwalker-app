@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WCSessionDelegate {
 
+    @IBOutlet weak var xAccLabel: UILabel!
+    @IBOutlet weak var yAccLabel: UILabel!
+    @IBOutlet weak var zAccLabel: UILabel!
+    var session: WCSession?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if (WCSession.isSupported()) {
+            session = WCSession.default
+            session!.delegate = self
+            session!.activate()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +32,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("Activated? \(activationState)")
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        print("Received message! \(message)")
+        xAccLabel.text = String(describing: message["x"] as! Float)
+        yAccLabel.text = String(describing: message["y"] as! Float)
+        zAccLabel.text = String(describing: message["z"] as! Float)
+    }
 }
 
