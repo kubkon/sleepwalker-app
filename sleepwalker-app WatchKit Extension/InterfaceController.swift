@@ -13,6 +13,7 @@ import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var activated = false
+    let motionManager = CMMotionManager()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -39,16 +40,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         activated = true
         WCSession.default.sendMessage(["x" : 0.0, "y" : 0.0, "z" : 0.0], replyHandler: nil)
         
-        let motionManager = CMMotionManager()
         if motionManager.isAccelerometerAvailable {
-            motionManager.accelerometerUpdateInterval = 0.1
+            motionManager.accelerometerUpdateInterval = 5
             motionManager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: { (data, error) in
                 if let data = data {
                     let x = data.acceleration.x
                     let y = data.acceleration.y
                     let z = data.acceleration.z
                     
-                    print("x:\(x) y:\(y) z:\(z)")
+//                    print("x:\(x) y:\(y) z:\(z)")
                     
                     WCSession.default.sendMessage(["x" : x, "y" : y, "z" : z], replyHandler: nil)
                 }
