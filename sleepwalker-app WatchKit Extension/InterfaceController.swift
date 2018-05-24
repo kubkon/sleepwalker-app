@@ -12,23 +12,20 @@ import WatchConnectivity
 import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    var activated = false
+    @IBOutlet weak var startRecordingButton: WKInterfaceButton!
+    
+    var sessionActivated = false
+    var buffer : [AccelReading] = []
     let motionManager = CMMotionManager()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
         // Configure interface objects here.
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        if (WCSession.isSupported() && !activated) {
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
-        }
     }
     
     override func didDeactivate() {
@@ -36,21 +33,33 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
+    @IBAction func startRecordingButtonTapped() {
+        print("startRecordingButton pressed!")
+        if (WCSession.isSupported() && !sessionActivated) {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+            print("Activating a session...")
+        }
+    }
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        activated = true
-        WCSession.default.sendMessage(["x" : 0.0, "y" : 0.0, "z" : 0.0], replyHandler: nil)
+        print("Session activated!")
+        sessionActivated = true
         
         if motionManager.isAccelerometerAvailable {
-            motionManager.accelerometerUpdateInterval = 5
-            motionManager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: { (data, error) in
+            motionManager.accelerometerUpdateInterval = 0.1
+            motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
                 if let data = data {
-                    let x = data.acceleration.x
-                    let y = data.acceleration.y
-                    let z = data.acceleration.z
-                    
-//                    print("x:\(x) y:\(y) z:\(z)")
-                    
-                    WCSession.default.sendMessage(["x" : x, "y" : y, "z" : z], replyHandler: nil)
+                    let reading = AccelReading(x: data.acceleration.x, y: data.acceleration.y, z: data.acceleration.z)
+                    self.buffer.append(reading)
+                    if (self.buffer.count == 600) { // 60secs, send the data
+                        let rawBytes = pack(self.buffer)
+                        let message = Data(bytes: rawBytes)
+                        WCSession.default.sendMessageData(message, replyHandler: nil, errorHandler: {(error) in
+                            print("Oops! Something went wrong: \(error)")
+                        })
+                    }
                 }
             })
         }

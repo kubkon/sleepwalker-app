@@ -44,11 +44,8 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("Received message! \(message)")
-        xAccLabel.text = String(describing: message["x"] as! Float)
-        yAccLabel.text = String(describing: message["y"] as! Float)
-        zAccLabel.text = String(describing: message["z"] as! Float)
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        print("Received data!")
     }
 }
 

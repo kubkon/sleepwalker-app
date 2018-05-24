@@ -22,6 +22,10 @@
 		CE3D016420B3704C009C64B7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D016320B3704C009C64B7 /* ExtensionDelegate.swift */; };
 		CE3D016620B3704C009C64B7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D016520B3704C009C64B7 /* NotificationController.swift */; };
 		CE3D016820B3704C009C64B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3D016720B3704C009C64B7 /* Assets.xcassets */; };
+		CECA7DEA20B749C9005FDE57 /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DE920B749C9005FDE57 /* Bytes.swift */; };
+		CECA7DEB20B749D1005FDE57 /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DE920B749C9005FDE57 /* Bytes.swift */; };
+		CECA7DED20B751F9005FDE57 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* Common.swift */; };
+		CECA7DEE20B75204005FDE57 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,8 @@
 		CE3D016720B3704C009C64B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE3D016920B3704C009C64B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3D016A20B3704C009C64B7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CECA7DE920B749C9005FDE57 /* Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bytes.swift; sourceTree = "<group>"; };
+		CECA7DEC20B751F9005FDE57 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,8 @@
 		CE3D011C20B37049009C64B7 = {
 			isa = PBXGroup;
 			children = (
+				CECA7DEC20B751F9005FDE57 /* Common.swift */,
+				CECA7DE920B749C9005FDE57 /* Bytes.swift */,
 				CE3D012720B3704A009C64B7 /* sleepwalker-app */,
 				CE3D013C20B3704B009C64B7 /* sleepwalker-appTests */,
 				CE3D014720B3704B009C64B7 /* sleepwalker-appUITests */,
@@ -414,7 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECA7DEE20B75204005FDE57 /* Common.swift in Sources */,
 				CE3D012B20B3704A009C64B7 /* ViewController.swift in Sources */,
+				CECA7DEB20B749D1005FDE57 /* Bytes.swift in Sources */,
 				CE3D012920B3704A009C64B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +450,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3D016620B3704C009C64B7 /* NotificationController.swift in Sources */,
+				CECA7DEA20B749C9005FDE57 /* Bytes.swift in Sources */,
 				CE3D016420B3704C009C64B7 /* ExtensionDelegate.swift in Sources */,
+				CECA7DED20B751F9005FDE57 /* Common.swift in Sources */,
 				CE3D016220B3704C009C64B7 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
