@@ -12,11 +12,7 @@ typealias Byte = UInt8
 
 func pack<T>(_ value: T) -> [Byte] {
     var value = value
-    return withUnsafePointer(to: &value) {
-        $0.withMemoryRebound(to: Byte.self, capacity: MemoryLayout<T>.size) {
-            Array(UnsafeBufferPointer(start: $0, count: MemoryLayout<T>.size))
-        }
-    }
+    return withUnsafeBytes(of: &value, { Array($0) })
 }
 
 func unpack<T>(_ value: [Byte], _: T.Type) -> T {

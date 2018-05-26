@@ -21,9 +21,13 @@ class sleepwalker_appTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testByteConversion() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let expected = 0.12345
+        let inBytes = pack(expected)
+        let given = unpack(inBytes, Double.self)
+        XCTAssertEqual(expected, given)
     }
     
     func testPerformanceExample() {

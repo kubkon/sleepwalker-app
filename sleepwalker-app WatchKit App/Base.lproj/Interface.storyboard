@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="sleepwalker_app_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="136" height="67" alignment="left" title="Start" id="dBk-Rs-27Y">
+                        <button width="136" height="61" alignment="left" title="Start" id="dBk-Rs-27Y">
                             <connections>
                                 <action selector="startRecordingButtonTapped" destination="AgC-eL-Hgc" id="BR8-MC-H6b"/>
                             </connections>
@@ -25,7 +25,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

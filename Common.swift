@@ -9,7 +9,28 @@
 import Foundation
 
 struct AccelReading {
-    var x : Double = 0.0
-    var y : Double = 0.0
-    var z : Double = 0.0
+    var x : Double
+    var y : Double
+    var z : Double
+    
+    init(fromX x: Double, fromY y: Double, fromZ z: Double) {
+        self.x = x
+        self.y = y
+        self.z = z
+    }
+    
+    func toBytes() -> [Byte] {
+        let rawX = pack(x)
+        let rawY = pack(y)
+        let rawZ = pack(z)
+        return rawX + rawY + rawZ
+    }
+    
+    static func fromBytes(_ bytes: [Byte]) -> AccelReading {
+        // FIX error handling
+        let x = unpack(Array(bytes[0...2]), Double.self)
+        let y = unpack(Array(bytes[3...5]), Double.self)
+        let z = unpack(Array(bytes[6...8]), Double.self)
+        return AccelReading(fromX: x, fromY: y, fromZ: z)
+    }
 }

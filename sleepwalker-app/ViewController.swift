@@ -45,7 +45,15 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
-        print("Received data!")
+        print("Received data: \(messageData.count) bytes")
+        if messageData.count != 2400 {
+            return
+        }
+        let step = 24
+        for i in stride(from: 0, to: messageData.count, by: step) {
+            let reading = AccelReading.fromBytes(Array(messageData[i..<(i + step)]))
+            print("\(reading)")
+        }
     }
 }
 
