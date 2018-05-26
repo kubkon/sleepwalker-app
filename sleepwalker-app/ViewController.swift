@@ -52,7 +52,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         let step = 24
         for i in stride(from: 0, to: messageData.count, by: step) {
             let reading = AccelReading.fromBytes(Array(messageData[i..<(i + step)]))
-            print("\(reading)")
+            print(reading)
         }
     }
 }

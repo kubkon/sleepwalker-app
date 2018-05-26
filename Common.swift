@@ -28,9 +28,9 @@ struct AccelReading {
     
     static func fromBytes(_ bytes: [Byte]) -> AccelReading {
         // FIX error handling
-        let x = unpack(Array(bytes[0...2]), Double.self)
-        let y = unpack(Array(bytes[3...5]), Double.self)
-        let z = unpack(Array(bytes[6...8]), Double.self)
+        let x = unpack(Array(bytes[0..<8]), Double.self)
+        let y = unpack(Array(bytes[8..<16]), Double.self)
+        let z = unpack(Array(bytes[16...]), Double.self)
         return AccelReading(fromX: x, fromY: y, fromZ: z)
     }
 }
