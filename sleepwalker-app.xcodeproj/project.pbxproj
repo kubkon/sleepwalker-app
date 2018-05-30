@@ -26,6 +26,7 @@
 		CECA7DEB20B749D1005FDE57 /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DE920B749C9005FDE57 /* Bytes.swift */; };
 		CECA7DED20B751F9005FDE57 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* Common.swift */; };
 		CECA7DEE20B75204005FDE57 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* Common.swift */; };
+		CEDAA83C20BF357800E8F0D9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDAA83B20BF357800E8F0D9 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		CE3D016A20B3704C009C64B7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		CECA7DE920B749C9005FDE57 /* Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bytes.swift; sourceTree = "<group>"; };
 		CECA7DEC20B751F9005FDE57 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		CEDAA83920BF357800E8F0D9 /* sleepwalker-app WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "sleepwalker-app WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		CEDAA83B20BF357800E8F0D9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDAA83C20BF357800E8F0D9 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +160,7 @@
 				CE3D015120B3704B009C64B7 /* sleepwalker-app WatchKit App */,
 				CE3D016020B3704C009C64B7 /* sleepwalker-app WatchKit Extension */,
 				CE3D012620B3704A009C64B7 /* Products */,
+				CEDAA83A20BF357800E8F0D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +220,7 @@
 		CE3D016020B3704C009C64B7 /* sleepwalker-app WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CEDAA83920BF357800E8F0D9 /* sleepwalker-app WatchKit Extension.entitlements */,
 				CE3D016120B3704C009C64B7 /* InterfaceController.swift */,
 				CE3D016320B3704C009C64B7 /* ExtensionDelegate.swift */,
 				CE3D016520B3704C009C64B7 /* NotificationController.swift */,
@@ -223,6 +229,14 @@
 				CE3D016A20B3704C009C64B7 /* PushNotificationPayload.apns */,
 			);
 			path = "sleepwalker-app WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		CEDAA83A20BF357800E8F0D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAA83B20BF357800E8F0D9 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +343,11 @@
 				TargetAttributes = {
 					CE3D012420B3704A009C64B7 = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					CE3D013820B3704B009C64B7 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -345,6 +364,9 @@
 						CreatedOnToolsVersion = 9.3.1;
 						SystemCapabilities = {
 							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 1;
+							};
+							com.apple.HealthKit.watchos = {
 								enabled = 1;
 							};
 						};
@@ -628,6 +650,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "sleepwalker-app WatchKit Extension/sleepwalker-app WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
 				INFOPLIST_FILE = "sleepwalker-app WatchKit Extension/Info.plist";
@@ -650,6 +673,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "sleepwalker-app WatchKit Extension/sleepwalker-app WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FU5YBRU8W;
 				INFOPLIST_FILE = "sleepwalker-app WatchKit Extension/Info.plist";

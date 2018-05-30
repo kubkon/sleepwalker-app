@@ -10,6 +10,7 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 import CoreMotion
+import HealthKit
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet weak var startRecordingButton: WKInterfaceButton!
@@ -20,6 +21,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var session : WCSession?
     var buffer : [Byte] = []
     let motionManager = CMMotionManager()
+    let healthStore = HKHealthStore()
+    var workoutSession : HKWorkoutSession?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -51,6 +54,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             return
         }
         if !accelActivated {
+            workoutSession = try! HKWorkoutSession(configuration: HKWorkoutConfiguration.init())
+            healthStore.start(workoutSession!)
             startRecordingButton.setTitle("Stop")
             if motionManager.isAccelerometerAvailable {
                 motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
@@ -59,9 +64,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                         self.buffer += reading.toBytes()
                         if (self.buffer.count == 3 * 8 * InterfaceController.fs * 10) { // 10secs, send the data
                             let message = Data(bytes: self.buffer)
-                            WCSession.default.sendMessageData(message, replyHandler: nil, errorHandler: {(error) in
-                                print("Oops! Something went wrong: \(error)")
-                            })
+                            let datetime = Date.init()
+                            print(datetime)
+                            WCSession.default.transferUserInfo(["data" : message])
+//                            WCSession.default.sendMessageData(message, replyHandler: nil, errorHandler: {(error) in
+//                                print("Oops! Something went wrong: \(error)")
+//                            })
                             self.buffer.removeAll()
                         }
                     }
@@ -72,6 +80,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             startRecordingButton.setTitle("Start")
             motionManager.stopAccelerometerUpdates()
             buffer.removeAll()
+            if let workoutSession = workoutSession {
+                healthStore.end(workoutSession)
+            }
         }
         accelActivated = !accelActivated
     }

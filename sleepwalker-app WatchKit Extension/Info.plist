@@ -31,9 +31,7 @@
 		<string>com.apple.watchkit</string>
 	</dict>
 	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
+	<array/>
 	<key>WKBackgroundModes</key>
 	<array>
 		<string>workout-processing</string>

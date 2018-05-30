@@ -44,6 +44,27 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        print("Received user info")
+        if let data = userInfo["data"] {
+            if let data = data as? Data {
+                if data.count != 2400 {
+                    print("Malformed packet received!")
+                    return
+                }
+                let step = 24
+                for i in stride(from: 0, to: data.count, by: step) {
+                    let reading = AccelReading.fromBytes(Array(data[i..<(i + step)]))
+                    print(reading)
+                }
+            } else {
+                print("Data was empty!")
+            }
+        } else {
+            print("No valid data found")
+        }
+    }
+    
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
         print("Received data: \(messageData.count) bytes")
         if messageData.count != 2400 {
