@@ -59,19 +59,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             startRecordingButton.setTitle("Stop")
             if motionManager.isAccelerometerAvailable {
                 motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
-                    if let data = data {
-                        let reading = AccelReading(fromX: data.acceleration.x, fromY: data.acceleration.y, fromZ: data.acceleration.z)
-                        self.buffer += reading.toBytes()
-                        if (self.buffer.count == 3 * 8 * InterfaceController.fs * 10) { // 10secs, send the data
-                            let message = Data(bytes: self.buffer)
-                            let datetime = Date.init()
-                            print(datetime)
-                            WCSession.default.transferUserInfo(["data" : message])
-//                            WCSession.default.sendMessageData(message, replyHandler: nil, errorHandler: {(error) in
-//                                print("Oops! Something went wrong: \(error)")
-//                            })
-                            self.buffer.removeAll()
-                        }
+                    guard let data = data else {
+                        print("Couldn't unwrap accelerometer data: \(String(describing: error))")
+                        return
+                    }
+                    let reading = AccelReading(fromX: data.acceleration.x, fromY: data.acceleration.y, fromZ: data.acceleration.z)
+                    self.buffer += reading.toBytes()
+                    if (self.buffer.count == 3 * 8 * InterfaceController.fs * 10) { // 10secs, send the data
+                        let message = Data(bytes: self.buffer)
+                        WCSession.default.transferUserInfo(["timestamp" : Date.init().timeIntervalSince1970, "data" : message])
+                        self.buffer.removeAll()
                     }
                 })
             }

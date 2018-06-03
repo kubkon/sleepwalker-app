@@ -46,34 +46,28 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         print("Received user info")
-        if let data = userInfo["data"] {
-            if let data = data as? Data {
-                if data.count != 2400 {
-                    print("Malformed packet received!")
-                    return
-                }
-                let step = 24
-                for i in stride(from: 0, to: data.count, by: step) {
-                    let reading = AccelReading.fromBytes(Array(data[i..<(i + step)]))
-                    print(reading)
-                }
-            } else {
-                print("Data was empty!")
-            }
-        } else {
+        guard let rawTimestamp = userInfo["timestamp"], let rawData = userInfo["data"] else {
             print("No valid data found")
+            return
         }
-    }
-    
-    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
-        print("Received data: \(messageData.count) bytes")
-        if messageData.count != 2400 {
+        guard let timestamp = rawTimestamp as? TimeInterval else {
+            print("Couldn't parse timestamp")
+            return
+        }
+        guard let data = rawData as? Data else {
+            print("Couldn't parse data")
+            return
+        }
+        if data.count != 2400 {
+            print("Malformed packet received!")
             return
         }
         let step = 24
-        for i in stride(from: 0, to: messageData.count, by: step) {
-            let reading = AccelReading.fromBytes(Array(messageData[i..<(i + step)]))
-            print(reading)
+        var count = 0
+        for i in stride(from: 0, to: data.count, by: step) {
+            let reading = AccelReading.fromBytes(Array(data[i..<(i + step)]))
+            print(timestamp + (Double(count) * 0.1), reading)
+            count += 1
         }
     }
 }
