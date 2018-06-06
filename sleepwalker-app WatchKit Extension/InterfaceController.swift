@@ -34,7 +34,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("Activating the session!")
         }
         if motionManager.isAccelerometerAvailable {
-            motionManager.accelerometerUpdateInterval = 0.1
+            motionManager.accelerometerUpdateInterval = 1 / Double(InterfaceController.fs)
         }
     }
     
@@ -63,11 +63,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                         print("Couldn't unwrap accelerometer data: \(String(describing: error))")
                         return
                     }
-                    let reading = AccelReading(fromX: data.acceleration.x, fromY: data.acceleration.y, fromZ: data.acceleration.z)
+                    let accel = AccelReading(data.acceleration.x, data.acceleration.y, data.acceleration.z)
+                    let reading = Reading(Date.init().timeIntervalSince1970, accel)
                     self.buffer += reading.toBytes()
-                    if (self.buffer.count == 3 * 8 * InterfaceController.fs * 10) { // 10secs, send the data
+                    if (self.buffer.count == Reading.SIZE_BYTES * InterfaceController.fs * 10) { // 10secs, send the data
                         let message = Data(bytes: self.buffer)
-                        WCSession.default.transferUserInfo(["timestamp" : Date.init().timeIntervalSince1970, "data" : message])
+                        WCSession.default.sendMessageData(message, replyHandler: nil, errorHandler: {(error) in
+                            print("Ooops, something went wrong: \(error)")
+                        })
                         self.buffer.removeAll()
                     }
                 })

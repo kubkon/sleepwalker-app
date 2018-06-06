@@ -12,9 +12,8 @@ import WatchConnectivity
 class ViewController: UIViewController, WCSessionDelegate {
 
     @IBOutlet weak var xAccLabel: UILabel!
-    @IBOutlet weak var yAccLabel: UILabel!
-    @IBOutlet weak var zAccLabel: UILabel!
     var session: WCSession?
+    var lastTimestamp: TimeInterval?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,31 +43,22 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
     
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        print("Received user info")
-        guard let rawTimestamp = userInfo["timestamp"], let rawData = userInfo["data"] else {
-            print("No valid data found")
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        print("Received \(messageData.count) bytes")
+        if messageData.count != Reading.SIZE_BYTES * 100 {
+            // FIX perhaps throw an error?
             return
         }
-        guard let timestamp = rawTimestamp as? TimeInterval else {
-            print("Couldn't parse timestamp")
-            return
+        let currentTimestamp = Date.init().timeIntervalSince1970
+        if let lastTimestamp = lastTimestamp {
+            let duration = currentTimestamp - lastTimestamp
+            xAccLabel.text = String(describing: duration) + "s"
         }
-        guard let data = rawData as? Data else {
-            print("Couldn't parse data")
-            return
-        }
-        if data.count != 2400 {
-            print("Malformed packet received!")
-            return
-        }
-        let step = 24
-        var count = 0
-        for i in stride(from: 0, to: data.count, by: step) {
-            let reading = AccelReading.fromBytes(Array(data[i..<(i + step)]))
-            print(timestamp + (Double(count) * 0.1), reading)
-            count += 1
+        lastTimestamp = currentTimestamp
+        for i in stride(from: 0, to: messageData.count, by: Reading.SIZE_BYTES) {
+            if let _ = Reading.fromBytes(Array(messageData[i..<(i + Reading.SIZE_BYTES)])) {
+                print("Parsing successful")
+            }
         }
     }
 }
-
