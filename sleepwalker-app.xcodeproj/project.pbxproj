@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE39E79720CCFFF4007A5531 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39E79620CCFFF4007A5531 /* DataManager.swift */; };
 		CE3D012920B3704A009C64B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D012820B3704A009C64B7 /* AppDelegate.swift */; };
 		CE3D012B20B3704A009C64B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D012A20B3704A009C64B7 /* ViewController.swift */; };
 		CE3D012E20B3704A009C64B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3D012C20B3704A009C64B7 /* Main.storyboard */; };
@@ -86,6 +87,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE39E79620CCFFF4007A5531 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE3D012520B3704A009C64B7 /* sleepwalker-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sleepwalker-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D012820B3704A009C64B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3D012A20B3704A009C64B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				CE3D016720B3704C009C64B7 /* Assets.xcassets */,
 				CE3D016920B3704C009C64B7 /* Info.plist */,
 				CE3D016A20B3704C009C64B7 /* PushNotificationPayload.apns */,
+				CE39E79620CCFFF4007A5531 /* DataManager.swift */,
 			);
 			path = "sleepwalker-app WatchKit Extension";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3D016620B3704C009C64B7 /* NotificationController.swift in Sources */,
+				CE39E79720CCFFF4007A5531 /* DataManager.swift in Sources */,
 				CECA7DEA20B749C9005FDE57 /* Bytes.swift in Sources */,
 				CE3D016420B3704C009C64B7 /* ExtensionDelegate.swift in Sources */,
 				CECA7DED20B751F9005FDE57 /* Common.swift in Sources */,
