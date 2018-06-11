@@ -15,6 +15,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet weak var startRecordingButton: WKInterfaceButton!
     var session : WCSession?
     var sessionHandler: (() -> Void)?
+    var dataManager: DataManager?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -73,16 +74,43 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         default:
             os_log("Session activated", log: OSLog.default, type: .info)
             sessionHandler = startStopRecording
+            dataManager = DataManager.new()
         }
     }
     
     func sessionReachabilityDidChange(_ session: WCSession) {
-        if (session.isReachable) { sessionHandler = startStopRecording }
-        else { sessionHandler = noWCConnectivity }
+        if (session.isReachable) {
+            sessionHandler = startStopRecording
+        } else {
+            sessionHandler = noWCConnectivity
+        }
     }
     
     func startStopRecording() {
         os_log("Start recording...", log: OSLog.default, type: .info)
+        guard let dm = dataManager else {
+            let action = WKAlertAction.init(title: "OK", style: WKAlertActionStyle.default, handler: {})
+            presentAlert(withTitle: "No data updates",
+                         message: "Could not start data updated.",
+                         preferredStyle: WKAlertControllerStyle.alert,
+                         actions: [action])
+            return
+        }
+        if (dm.isRunning) {
+            dm.stop()
+        } else {
+            dm.start(withUpdatesHandler: {(data, error) in
+                if let _ = error {
+                    // FIX handle error
+                    return
+                }
+                guard let data = data else {
+                    // FIX handle error
+                    return
+                }
+                // FIX serialize and send data to iOS counterpart app
+            })
+        }
     }
     
     func noWCConnectivity() {
