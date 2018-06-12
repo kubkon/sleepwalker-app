@@ -99,7 +99,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         if (dm.isRunning) {
             dm.stop()
         } else {
-            dm.start(withUpdatesHandler: {(data, error) in
+            dm.start(withUpdatesHandler: { (data, error) in
                 if let _ = error {
                     // FIX handle error
                     return
@@ -109,7 +109,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                     return
                 }
                 // FIX serialize and send data to iOS counterpart app
-                
+                var bytes: [Byte] = []
+                for reading in data {
+                    bytes += reading.serialize()
+                }
+                WCSession.default.sendMessageData(Data(bytes: bytes), replyHandler: nil, errorHandler: {(error) in
+                    // FIX handle error
+                })
             })
         }
     }
