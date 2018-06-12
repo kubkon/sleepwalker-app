@@ -45,7 +45,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
         print("Received \(messageData.count) bytes")
-        if messageData.count != Reading.SIZE_BYTES * 100 {
+        if messageData.count != AccelReading.SIZE_BYTES * 100 {
             // FIX perhaps throw an error?
             return
         }
@@ -55,8 +55,8 @@ class ViewController: UIViewController, WCSessionDelegate {
             xAccLabel.text = String(describing: duration) + "s"
         }
         lastTimestamp = currentTimestamp
-        for i in stride(from: 0, to: messageData.count, by: Reading.SIZE_BYTES) {
-            if let _ = Reading.fromBytes(Array(messageData[i..<(i + Reading.SIZE_BYTES)])) {
+        for i in stride(from: 0, to: messageData.count, by: AccelReading.SIZE_BYTES) {
+            if let _ = AccelReading.deserialize(fromBytes: Array(messageData[i..<(i + AccelReading.SIZE_BYTES)])) {
                 print("Parsing successful")
             }
         }

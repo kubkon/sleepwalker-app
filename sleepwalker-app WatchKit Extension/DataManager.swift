@@ -27,7 +27,7 @@ class DataManager : NSObject {
         get { return _isRunning }
     }
     
-    fileprivate var buffer: [Reading] = []
+    fileprivate var buffer: [AccelReading] = []
     
     static func new() -> DataManager? {
         let dm = DataManager()
@@ -42,7 +42,7 @@ class DataManager : NSObject {
         super.init()
     }
     
-    func start(withUpdatesHandler handler: (([Reading]?, Error?) -> Void)!) {
+    func start(withUpdatesHandler handler: (([AccelReading]?, Error?) -> Void)!) {
         if _isRunning { return }
         if workoutSession == nil {
             guard let session = try? HKWorkoutSession(configuration: HKWorkoutConfiguration.init()) else {
@@ -55,8 +55,12 @@ class DataManager : NSObject {
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
             if let error = error { handler(nil, error); return }
             guard let data = data else { handler(nil, DataManagerError.CouldntParseAccelerometerData); return }
-            let accel = AccelReading(data.acceleration.x, data.acceleration.y, data.acceleration.z)
-            let reading = Reading(Date.init().timeIntervalSince1970, accel)
+            let reading = AccelReading(
+                fromTimestamp: Date.init().timeIntervalSince1970,
+                fromX: data.acceleration.x,
+                fromY: data.acceleration.y,
+                fromZ: data.acceleration.z
+            )
             self.buffer.append(reading)
             if self.buffer.count == DataManager.Fs {
                 handler(self.buffer, nil)

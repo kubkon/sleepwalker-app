@@ -109,6 +109,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                     return
                 }
                 // FIX serialize and send data to iOS counterpart app
+                
             })
         }
     }
