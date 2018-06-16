@@ -23,10 +23,12 @@
 		CE3D016420B3704C009C64B7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D016320B3704C009C64B7 /* ExtensionDelegate.swift */; };
 		CE3D016620B3704C009C64B7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D016520B3704C009C64B7 /* NotificationController.swift */; };
 		CE3D016820B3704C009C64B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3D016720B3704C009C64B7 /* Assets.xcassets */; };
+		CEBB7CF720D512E8001F845E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7CF620D512E8001F845E /* Constants.swift */; };
+		CEBB7CF820D512E8001F845E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7CF620D512E8001F845E /* Constants.swift */; };
 		CECA7DEA20B749C9005FDE57 /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DE920B749C9005FDE57 /* Bytes.swift */; };
 		CECA7DEB20B749D1005FDE57 /* Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DE920B749C9005FDE57 /* Bytes.swift */; };
-		CECA7DED20B751F9005FDE57 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* Common.swift */; };
-		CECA7DEE20B75204005FDE57 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* Common.swift */; };
+		CECA7DED20B751F9005FDE57 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* DataStructures.swift */; };
+		CECA7DEE20B75204005FDE57 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7DEC20B751F9005FDE57 /* DataStructures.swift */; };
 		CEDAA83C20BF357800E8F0D9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDAA83B20BF357800E8F0D9 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,8 +114,9 @@
 		CE3D016720B3704C009C64B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE3D016920B3704C009C64B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3D016A20B3704C009C64B7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CEBB7CF620D512E8001F845E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CECA7DE920B749C9005FDE57 /* Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bytes.swift; sourceTree = "<group>"; };
-		CECA7DEC20B751F9005FDE57 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		CECA7DEC20B751F9005FDE57 /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		CEDAA83920BF357800E8F0D9 /* sleepwalker-app WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "sleepwalker-app WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		CEDAA83B20BF357800E8F0D9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -154,7 +157,8 @@
 		CE3D011C20B37049009C64B7 = {
 			isa = PBXGroup;
 			children = (
-				CECA7DEC20B751F9005FDE57 /* Common.swift */,
+				CEBB7CF620D512E8001F845E /* Constants.swift */,
+				CECA7DEC20B751F9005FDE57 /* DataStructures.swift */,
 				CECA7DE920B749C9005FDE57 /* Bytes.swift */,
 				CE3D012720B3704A009C64B7 /* sleepwalker-app */,
 				CE3D013C20B3704B009C64B7 /* sleepwalker-appTests */,
@@ -348,7 +352,7 @@
 						CreatedOnToolsVersion = 9.3.1;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -447,7 +451,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECA7DEE20B75204005FDE57 /* Common.swift in Sources */,
+				CEBB7CF720D512E8001F845E /* Constants.swift in Sources */,
+				CECA7DEE20B75204005FDE57 /* DataStructures.swift in Sources */,
 				CE3D012B20B3704A009C64B7 /* ViewController.swift in Sources */,
 				CECA7DEB20B749D1005FDE57 /* Bytes.swift in Sources */,
 				CE3D012920B3704A009C64B7 /* AppDelegate.swift in Sources */,
@@ -478,7 +483,8 @@
 				CE39E79720CCFFF4007A5531 /* DataManager.swift in Sources */,
 				CECA7DEA20B749C9005FDE57 /* Bytes.swift in Sources */,
 				CE3D016420B3704C009C64B7 /* ExtensionDelegate.swift in Sources */,
-				CECA7DED20B751F9005FDE57 /* Common.swift in Sources */,
+				CEBB7CF820D512E8001F845E /* Constants.swift in Sources */,
+				CECA7DED20B751F9005FDE57 /* DataStructures.swift in Sources */,
 				CE3D016220B3704C009C64B7 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

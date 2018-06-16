@@ -98,6 +98,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         if (dm.isRunning) {
             dm.stop()
+            startRecordingButton.setTitle("Start")
         } else {
             dm.start(withUpdatesHandler: { (data, error) in
                 if let _ = error {
@@ -117,6 +118,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                     // FIX handle error
                 })
             })
+            startRecordingButton.setTitle("Stop")
         }
     }
     

@@ -16,8 +16,6 @@ enum DataManagerError: Error {
 }
 
 class DataManager : NSObject {
-    static let Fs = 10 // 10Hz
-    
     fileprivate var motionManager: CMMotionManager
     fileprivate var healthStore: HKHealthStore
     fileprivate var workoutSession: HKWorkoutSession?
@@ -32,7 +30,7 @@ class DataManager : NSObject {
     static func new() -> DataManager? {
         let dm = DataManager()
         if !dm.motionManager.isAccelerometerAvailable { return nil }
-        dm.motionManager.accelerometerUpdateInterval = 1 / Double(DataManager.Fs)
+        dm.motionManager.accelerometerUpdateInterval = 1 / Double(Constants.SamplingRate)
         return dm
     }
     
@@ -62,7 +60,7 @@ class DataManager : NSObject {
                 fromZ: data.acceleration.z
             )
             self.buffer.append(reading)
-            if self.buffer.count == DataManager.Fs {
+            if self.buffer.count == Constants.SamplingRate * Constants.SamplingWindow {
                 handler(self.buffer, nil)
                 self.buffer.removeAll()
             }
