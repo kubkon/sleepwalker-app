@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AccelReading {
+struct AccelReading : Codable {
     static var SIZE_BYTES = 4 * 8
     
     var ts : TimeInterval

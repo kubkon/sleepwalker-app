@@ -14,6 +14,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var xAccLabel: UILabel!
     var session: WCSession?
     var lastTimestamp: TimeInterval?
+    var readings: [AccelReading] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,9 +83,33 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
         lastTimestamp = currentTimestamp
         for i in stride(from: 0, to: messageData.count, by: AccelReading.SIZE_BYTES) {
-            if let _ = AccelReading.deserialize(fromBytes: Array(messageData[i..<(i + AccelReading.SIZE_BYTES)])) {
-                print("Parsing successful")
+            if let reading = AccelReading.deserialize(fromBytes: Array(messageData[i..<(i + AccelReading.SIZE_BYTES)])) {
+                readings.append(reading)
             }
+        }
+        
+        if readings.count >= 600 {
+            // FIX send to server
+            guard let uploadData = try? JSONEncoder().encode(readings) else {
+                // FIX handle error
+                return
+            }
+            let url = URL(string: "http://192.168.0.19:3000")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
+                if let _ = error {
+                    // FIX handle error
+                    return
+                }
+                guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                    // FIX handle error
+                    return
+                }
+            }
+            task.resume()
+            readings.removeAll()
         }
     }
 }
