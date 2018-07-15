@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>For testing</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
